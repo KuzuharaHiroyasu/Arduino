@@ -79,34 +79,34 @@ void loop() {
       break;
     case 2: // 時刻
       dt = clock.getDateTime();
+      Serial.print("Y");
+      delay(50);
       Serial.print(dt.year);
       delay(50);
-      Serial.print("YEAR");
-      delay(50);
 
+      Serial.print("M");
+      delay(50);
       Serial.print(dt.month);
       delay(50);
-      Serial.print("MONTH");
-      delay(50);
 
+      Serial.print("D");
+      delay(50);
       Serial.print(dt.day);
       delay(50);
-      Serial.print("DAY");
-      delay(50);
       
+      Serial.print("h");
+      delay(50);
       Serial.print(dt.hour);
       delay(50);
-      Serial.print("HOUR");
-      delay(50);
 
+      Serial.print("m");
+      delay(50);
       Serial.print(dt.minute);
       delay(50);
-      Serial.print("MINUTE");
-      delay(50);
 
-      Serial.print(dt.second);
+      Serial.print("s");
       delay(50);
-      Serial.print("SECOND");
+      Serial.print(dt.second);
       delay(50);
 
       Serial.print("END");
