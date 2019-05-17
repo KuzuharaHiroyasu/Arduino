@@ -13,6 +13,8 @@ RTCDateTime dt;
 const int LED = 13;
 const int POWER = 22;
 const int VIB = 6;
+const int VIB2 = 5;
+
 int incomingByte = 0;   // for incoming serial data
 int interval = 250;
 int i, k = 0;
@@ -24,9 +26,11 @@ void setup() {
   pinMode(LED, OUTPUT);
   pinMode(POWER, OUTPUT);
   pinMode(VIB, OUTPUT);
+  pinMode(VIB2, OUTPUT);
   digitalWrite(LED, LOW);
   digitalWrite(POWER, HIGH);
   digitalWrite(VIB, LOW);
+  digitalWrite(VIB2, LOW);
   clock.begin();
 }
 
@@ -116,16 +120,32 @@ void loop() {
         break;
       case 3: //バイブ
         digitalWrite(VIB, HIGH);
+        digitalWrite(VIB2, HIGH);
+
         delay(100);
         digitalWrite(VIB, LOW);
-        delay(100);
+        delay(20);
+        digitalWrite(VIB2, LOW);
+
+        delay(80);
+
         digitalWrite(VIB, HIGH);
+        digitalWrite(VIB2, HIGH);
+
         delay(100);
         digitalWrite(VIB, LOW);
-        delay(100);
+        delay(20);
+        digitalWrite(VIB2, LOW);
+
+        delay(80);
+
         digitalWrite(VIB, HIGH);
+        digitalWrite(VIB2, HIGH);
+
         delay(100);
         digitalWrite(VIB, LOW);
+        delay(20);
+        digitalWrite(VIB2, LOW);
 
         break;
       default:
